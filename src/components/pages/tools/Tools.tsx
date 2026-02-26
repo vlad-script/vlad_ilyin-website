@@ -41,7 +41,6 @@ export default function Tools({ media, theme }: ToolsProps): JSX.Element {
     const [showDescriptions, setShowDescriptions] = useState<boolean>(false);
     const butRef = useRef<HTMLButtonElement>(null);
     const [butIsVisible, setButIsVisible] = useState<boolean>(false);
-    const navigate = useNavigate();
 
     function handleClickForDescription(): void {
         setShowDescriptions(!showDescriptions);

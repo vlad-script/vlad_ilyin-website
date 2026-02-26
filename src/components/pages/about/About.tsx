@@ -58,7 +58,6 @@ export default function About({ media, theme }: AboutProps): JSX.Element {
     const buttonRef = useRef<HTMLButtonElement>(null);
     const [butIsVisible, setButIsVisible] = useState<boolean>(false);
     const [animEnd, setAnimEnd] = useState<boolean>(false);
-    const navigate = useNavigate();
 
     const handleAnimationEnd = (e: AnimationEvent<HTMLDivElement>): void => {
         e.currentTarget.style.transform = 'scale(1)';

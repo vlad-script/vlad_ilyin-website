@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, FC, FormEvent, ChangeEvent } from 'react';
+import { useState, useRef, useEffect, FormEvent, ChangeEvent } from 'react';
 import './Contacts.css';
 import { useTranslation } from 'react-i18next';
 import emailjs from 'emailjs-com';
