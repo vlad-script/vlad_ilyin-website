@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import heart from '../../copyright/assets/heart.png';
 import circletime from './assets/circletime.png';
 import labyrinth from './assets/labyrinth.png';
-import cifron from './assets/cifron.png';
+import mysite from './assets/mysite.png';
 import sidebar from './assets/sidebar.png';
 import ts from '../tools/assets/slider/typescript.svg';
 import reactBlue from '../tools/assets/slider/react.svg';
@@ -54,7 +54,7 @@ export default function Portfolio(): JSX.Element {
             </div>
             <div className='projects-board'>
                 <Project img={circletime} arrayTec={[ts, reactBlue, webpack, sass]} animTimer={0} />
-                <Project img={cifron} arrayTec={[js, reactBlue, vite]} animTimer={2} />
+                <Project img={mysite} arrayTec={[ts, reactBlue, vite]} animTimer={2} />
                 <Project img={labyrinth} arrayTec={[js, html, css]} animTimer={1} />
                 <Project img={sidebar} arrayTec={[js, redux, reactBlue, styled, vite, sass]} animTimer={3} />
             </div>
@@ -134,34 +134,30 @@ function Project({ img, arrayTec, animTimer }: ProjectProps): JSX.Element {
     const handleClickUrl = (): void => {
         switch (img) {
             case circletime:
-                window.open('https://historicaldates-vladaltman.netlify.app/', '_blank');
+                window.open('https://historicaldates-vladilyin.netlify.app/', '_blank');
                 break;
             case labyrinth:
-                window.open('https://labyrinth-vladaltman.netlify.app/', '_blank');
+                window.open('https://labyrinth-vladilyin.netlify.app/', '_blank');
                 break;
-            case cifron:
-                window.open('https://cifron.netlify.app/', '_blank');
+            case mysite:
+                window.open('https://vladilyin.netlify.app/', '_blank');
                 break;
             case sidebar: 
-                window.open('https://vladjsxsidebar.netlify.app/', '_blank');
+                window.open('https://sidebar-vladilyin.netlify.app/', '_blank');
                 break;
         }
     };
 
     const handleClickGithub = (): void => {
-        switch (img) {
+        switch(img) {
             case circletime:
-                window.open('https://github.com/vladaltman/historical_dates.git', '_blank');
-                break;
+                open('https://github.com/vlad-script/historical_dates.git', '_blank');
             case labyrinth:
-                window.open('https://github.com/vladaltman/labyrinth.git', '_blank');
-                break;
-            case cifron:
-                window.open('https://github.com/vladaltman/Cifron.git', '_blank');
-                break;
+                open('https://github.com/vlad-script/labyrinth.git', '_blank');
+            case mysite:
+                open('https://github.com/vlad-script/vlad_ilyin-website.git', '_blank');
             case sidebar: 
-                window.open('https://github.com/vladaltman/Sidebar.git', '_blank');
-                break;
+                open('https://github.com/vlad-script/Sidebar.git', '_blank'); 
         }
     };
 
