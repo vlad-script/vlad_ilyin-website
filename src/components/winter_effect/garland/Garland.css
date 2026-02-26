@@ -1,0 +1,201 @@
+.garland-container {
+    position: fixed;
+    top: 1.5%;
+    left: 0;
+    width: 100vw;
+    height: 150px;
+    pointer-events: none;
+    z-index: 9998;
+    overflow: hidden;
+    perspective: 1000px;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.garland-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: none;
+    animation: garland-sway 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.garland-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(255, 215, 0, 0.3) 5%,
+        rgba(255, 215, 0, 0.5) 50%,
+        rgba(255, 215, 0, 0.3) 95%,
+        transparent 100%
+    );
+    border-radius: 50px;
+    transform: translateY(0);
+    clip-path: path('M 0,0 Q 50%,70 100%,0');
+}
+
+.garland-bulbs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: garland-sway 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.garland-bulb {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ffd700;
+    box-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.8),
+        0 0 20px rgba(255, 215, 0, 0.6),
+        inset 0 0 5px rgba(255, 255, 255, 0.5);
+    animation: bulb-flicker 2s ease-in-out infinite, bulb-hang 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    transform: translateX(-50%);
+}
+
+.garland-bulb:nth-child(odd) {
+    background: #ff6b6b;
+    box-shadow: 
+        0 0 10px rgba(255, 107, 107, 0.8),
+        0 0 20px rgba(255, 107, 107, 0.6),
+        inset 0 0 5px rgba(255, 255, 255, 0.5);
+    animation-duration: 2s, 6s;
+}
+
+.garland-bulb:nth-child(3n) {
+    background: #4ecdc4;
+    box-shadow: 
+        0 0 10px rgba(78, 205, 196, 0.8),
+        0 0 20px rgba(78, 205, 196, 0.6),
+        inset 0 0 5px rgba(255, 255, 255, 0.5);
+    animation-duration: 2.4s, 6s;
+}
+
+.garland-bulb:nth-child(4n) {
+    background: #ffe66d;
+    box-shadow: 
+        0 0 10px rgba(255, 230, 109, 0.8),
+        0 0 20px rgba(255, 230, 109, 0.6),
+        inset 0 0 5px rgba(255, 255, 255, 0.5);
+    animation-duration: 1.8s, 6s;
+}
+
+.garland-bulb-first,
+.garland-bulb-last {
+    transform: none;
+    animation: bulb-flicker 2s ease-in-out infinite, bulb-hang-edge 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.garland-bulb-first:nth-child(odd),
+.garland-bulb-last:nth-child(odd) {
+    animation-duration: 2s, 6s;
+}
+
+.garland-bulb-first:nth-child(3n),
+.garland-bulb-last:nth-child(3n) {
+    animation-duration: 2.4s, 6s;
+}
+
+.garland-bulb-first:nth-child(4n),
+.garland-bulb-last:nth-child(4n) {
+    animation-duration: 1.8s, 6s;
+}
+
+@keyframes garland-sway {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(2px) translateX(-1px);
+    }
+    50% {
+        transform: translateY(4px) translateX(0);
+    }
+    75% {
+        transform: translateY(2px) translateX(1px);
+    }
+}
+
+@keyframes bulb-hang {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0px);
+    }
+    25% {
+        transform: translateX(calc(-50% - 1px)) translateY(2px);
+    }
+    50% {
+        transform: translateX(-50%) translateY(4px);
+    }
+    75% {
+        transform: translateX(calc(-50% + 1px)) translateY(2px);
+    }
+}
+
+@keyframes bulb-hang-edge {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateX(-1px) translateY(2px);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+    75% {
+        transform: translateX(1px) translateY(2px);
+    }
+}
+
+@keyframes bulb-flicker {
+    0%, 100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+    25% {
+        opacity: 0.7;
+        filter: brightness(0.8);
+    }
+    50% {
+        opacity: 1;
+        filter: brightness(1.2);
+    }
+    75% {
+        opacity: 0.8;
+        filter: brightness(0.9);
+    }
+}
+
+@media (max-width: 959px) {
+    .garland-container {
+        height: 80px;
+        top: 10px;
+    }
+    
+    .garland-line {
+        height: 40px;
+    }
+    
+    .garland-line::before {
+        clip-path: path('M 0,0 Q 50%,40 100%,0');
+    }
+    
+    .garland-bulb {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+

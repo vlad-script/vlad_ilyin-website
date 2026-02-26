@@ -1,0 +1,259 @@
+@keyframes portfolioShowUp {
+    to {
+        opacity: 1;
+    }
+}
+@keyframes symbolExpShowUp {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes react-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes projectShowUp {
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+.portfolio {
+    position: relative;
+    background-color: rgb(26, 188, 242);
+    animation: portfolioShowUp .8s cubic-bezier(.4,0,.2,1) forwards;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(45px, 3.8vw, 3.8vw);
+    min-height: 100vh;
+}
+.portfolio .myportfolio {
+    font-size: clamp(65px, 115%, 115%);
+    font-weight: bold;
+    color: whitesmoke;
+    margin-top: 7%;
+    margin-left: 36%;
+    display: flex;
+    text-shadow: 7px 7px 7px rgb(19, 159, 206);
+}
+
+.projects-board {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 7% 0 0 4%;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    width: 24%;
+    background-color: rgba(0, 0, 0, 0.645);
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.curtain {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.921);
+    border-radius: 12px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all .3s ease-out;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 53%;
+}
+.curtain div {
+    color: #000000;
+    margin: 5% 0;
+    cursor: pointer;
+    font-family: 'Caveat';
+    transition: color .3s ease;
+}
+.curtain div:hover {
+    color: #1ABCF2;
+}
+
+.project:hover .curtain {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.project-img {
+    width: 100%;
+    display: flex;
+    border-radius: 12px;
+}
+.technology-stack {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .copyright {
+    position: absolute;
+    bottom: 4%;
+    font-size: 24%;
+    color: whitesmoke;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 7px #06434067;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+}
+.portfolio .copyright u {
+    cursor: pointer;
+    transition: color .2s linear;
+    font-size: 110%;
+}
+.portfolio .copyright u:hover {
+    color: rgba(255, 255, 255, 0.502);
+}
+.portfolio .copyright .heart {
+    width: 1.2%;
+    min-width: 12px;
+    vertical-align: middle;
+    margin: 0 0.2em;
+}
+.portfolio .copyright img:last-child {
+    width: 1.8%;
+    min-width: 18px;
+    vertical-align: middle;
+    animation: react-rotate 5s linear infinite;
+    user-select: none;
+    margin-left: 0.2em;
+}
+
+
+.portfolio ::selection {
+    background-color: rgb(5, 169, 224);
+}
+
+@media (max-width: 1300px) {
+    .projects-board {
+        margin: 7% 0 7% 10%;
+    }
+    .project {
+        width: 32%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 1140px) {
+    .projects-board {
+        margin: 7% 0 7% 10%;
+    }
+    .project {
+        width: 32%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 959px) {
+    .portfolio {
+        font-size: clamp(50px, 7vw, 7vw);
+        overflow-x: hidden;
+    }
+    .portfolio .myportfolio {
+        margin-top: clamp(80px, 12%, 12%);
+        font-size: clamp(50px, 116%, 116%);
+    }
+    .portfolio .copyright {
+        font-size: 18%;
+        width: 90%;
+        gap: 0.25em;
+    }
+    .portfolio .copyright .heart {
+        width: 1.5%;
+        min-width: 12px;
+        margin: 0 0.15em;
+    }
+    .portfolio .copyright img:last-child {
+        width: 2%;
+        min-width: 18px;
+        margin-left: 0.15em;
+    }
+    .projects-board {
+        width: 90%;
+        margin: 7% 0 25% 0;
+    }
+    .project {
+        width: 49%;
+        margin: 1% 0;
+    }
+}
+@media (max-width: 658px) {
+    .projects-board {
+        width: 100%;
+    }
+    .project {
+        width: 48%;
+        margin: 1%;
+    }
+}
+@media (max-width: 505px) {
+    .portfolio .copyright {
+        line-height: 1.8;
+    }
+    .portfolio .myportfolio {
+        font-size: min(44px);
+    }
+    .projects-board {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 30%;
+    }
+    .project {
+        width: 87%;
+    }
+}
+@media (max-width: 399px) {
+    .portfolio {
+        padding: 0 5px;
+    }
+    .portfolio .myportfolio {
+        margin-right: 7%;
+    }
+    .portfolio .copyright {
+        font-size: 18%;
+        gap: 0.2em;
+    }
+    .portfolio .copyright .heart {
+        width: 1.8%;
+        margin: 0 0.1em;
+    }
+    .portfolio .copyright img:last-child {
+        width: 2.2%;
+        margin-left: 0.1em;
+    }
+    .projects-board {
+        margin-bottom: 40%;
+    }
+    .project {
+        width: 87%;
+        margin-bottom: 3%;
+    }
+}
+
+
+

@@ -1,0 +1,150 @@
+@keyframes widgetIncrease {
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes CityColors {
+    0% { color: #64a6fc; }
+    16.66% { color: #2fd0c8; }
+    33.33% { color: #6ed485; }
+    50% { color: #fb9674; }
+    66.66% { color: #f8c24f; }
+    83.33% { color: #a189f0; }
+    100% { color: #64a6fc; }  
+}
+
+
+.weather-widget-container {
+    position: relative;
+    width: 80%;
+    height: 22vw;
+    min-height: 22vw;
+    margin-top: 29%;
+    animation: widgetIncrease 1.7s ease-out;
+    transform: scale(0.75);
+}
+
+.weather-widget {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*width: 80%;
+    height: 22vw;
+    min-height: 22vw;
+    margin-top: 29%;*/
+    line-height: 1;
+    user-select: none;
+
+    width: 100%;
+    height: 100%;
+}
+.cloud {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.error {
+    z-index: 1;
+    font-size: 1.5vw;
+    margin-top: 20%;
+}
+.temperature {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    z-index: 1;
+    height: 7.5vw;
+    max-height: 7.5vw;
+    text-align: center;
+    font-size: 5vw;
+    margin-left: 33%;
+    color: whitesmoke;
+}
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-size: 1.4vw;
+    margin-bottom: -1%;
+    text-align: center;
+    width: 50%;
+    height: 7vw;
+    max-height: 7vw;
+    color: #060727bc;
+    white-space: nowrap;
+}
+.description img {
+    width: 7.6vw;
+    min-width: 7.6vw;
+    pointer-events: none;
+}
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+    height: 5.4vw;
+    max-height: 5.4vw;
+    font-size: 3.3vw;
+    width: 95%;
+    margin-bottom: -2%;
+    animation: CityColors 20s linear infinite;
+}
+.city span {
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 2%;
+}
+
+@media (max-width: 1250px) {
+    .weather-widget-container {
+        margin-top: 40%;
+    }
+}
+
+@media (max-width: 959px) {
+    .weather-widget-container {
+        height: 47vw;
+        margin-top: 14%;
+    }
+    .error {
+        font-size: 2.8vw;
+    }
+    .temperature {
+        font-size: 10.5vw;
+        height: 35%;
+        max-height: 35%;
+    }
+    .description {
+        font-size: 2.9vw;
+        height: 30%;
+        max-height: 30%;
+    }
+    .description img {
+        width: 18.5vw;
+        min-width: 18.5vw;
+    }
+    .city {
+        font-size: 7.8vw;
+        height: 30%;
+        max-height: 30%;
+        padding: 0 0.8em;
+    }
+}
+
+@media (pointer: coarse) {
+    .weather-widget-container {
+        pointer-events: none;
+    }
+}
+
+
+

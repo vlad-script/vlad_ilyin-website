@@ -1,0 +1,79 @@
+{
+    "goodMorning": "Good morning!",
+    "goodEvening": "Good evening!",
+    "goodNight": "Good night!",
+    "iAm": "I'm",
+    "developer": "engineer",
+    "bigFanIT": "and a big fan of information technology",
+    "aboutMe": "About me",
+    "skills": "Skills",
+    "devBy": "Developed by",
+    "me": "me",
+    "with": "with",
+    "on": "on",
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "сontacts": "Contacts",
+    "aboutComponent": {
+        "facts": {
+            "cell-1lb": "Constantly learning",
+            "cell-1dc": "I'm learning about current technologies. I am constantly developing my skills in programming and IT.",
+            "cell-2lb": "Love to code",
+            "cell-2dc": "A fan of technology and IT. I am constantly progressing in my full-cycle development skills.",
+            "cell-3lb": "Diversity of interests",
+            "cell-3dc": "I am interested in different fields. I will be happy to take part in a project of any direction, be it business, innovation or startup.",
+            "cell-4lb": "Organized and productive",
+            "cell-4dc": "I am constantly developing and improving, finding the best ways to achieve my goals while maintaining a balance between work and personal life."
+        },
+        "buttonMoreFacts": "Details",
+        "buttonHideFacts": "Hide"
+    },
+    "toolsComponent": {
+        "brieflyCodingOnJs": "I program in JavaScript",
+        "brieflyDevOnReact": "I develop web applications and websites on ",
+        "facts": {
+            "cell-1lb": "HTML",
+            "cell-1dc": "Strong skills in HTML. I build a reliable and well-organized DOM structure.",
+            "cell-2lb": "CSS",
+            "cell-2dc": "I develop animations and styles of any level of complexity. I use various libraries for complex effects, for example: Framer Motion, GSAP, Swiper.",
+            "cell-3lb": "JavaScript",
+            "cell-3dc": "I have strong skills in JavaScript. Writing modern, efficient and clean code using ES6+ syntax, Promise, async/await.",
+            "cell-4lb": "React",
+            "cell-4dc": "Provides all the necessary tools for developing excellent and reactive applications and websites. My website is a living example.",
+            "cell-5lb": "React Router",
+            "cell-5dc": "Setting up routing via React Router. Single-page application architecture.",
+            "cell-6lb": "i18next",
+            "cell-6dc": "I create multilingual applications and websites using the react-i18next library.",
+            "cell-7lb": "PostgreSQL",
+            "cell-7dc": "I use PostgreSQL to work with databases.",
+            "cell-8lb": "Node.js",
+            "cell-8dc": "I'm implementing a backend on Node.js . Express.",
+            "cell-9lb": "TypeScript",
+            "cell-9dc": "I use the opportunities TypeScript — type, interface, generics and type checking at the compilation stage — to write predictable and reliable code.",
+            "cell-10lb": "Sass",
+            "cell-10dc": "I work with styles through sass/scss: variables, nesting, mixins.",
+            "cell-11lb": "SOLID",
+            "cell-11dc": "I adhere to SOLID principles and best practices to create a clean architecture and code reuse.",
+            "cell-12lb": "Redux",
+            "cell-12dc": "I use Redux to manage the application state."
+        }
+    },
+    "portfolioComponent": {
+        "copyright-1": "Developed by",
+        "copyright-2": "me",
+        "copyright-3": "with attention to detail and",
+        "copyright-4": "on React"
+    },
+    "contactsComponent": {
+        "textForForm-1": "To contact me, you can email me",
+        "textForForm-2": "choose the convenient method below or use the convenient form (enter your name, your email, the text of the message and click the send button).",
+        "name": "Name",
+        "message": "Message",
+        "send": "Send",
+        "alertOk": "The email has been sent!",
+        "alertNo": "Error when sending"
+    }
+}
+
+
+

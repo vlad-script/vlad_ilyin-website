@@ -1,0 +1,46 @@
+.desktop-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 105px;
+    height: 100%;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.desktop-menu .myLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 103px;
+}
+.desktop-menu .myLogo img {
+    width: 60%;
+    cursor: pointer;
+    transition: transform .4s ease;
+    user-select: none;
+}
+.desktop-menu .myLogo img:hover {
+    transform: scale(1.2);
+}
+.D-buttons-theme-lang {
+    padding-bottom: 19%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (pointer: coarse) {
+    .desktop-menu .myLogo img:hover {
+        transform: scale(1);
+    }
+    .desktop-menu .myLogo img:active {
+        transform: scale(1.2);
+    }
+}
+
+
+

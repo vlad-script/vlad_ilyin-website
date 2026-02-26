@@ -1,0 +1,55 @@
+.copyright {
+    position: absolute;
+    bottom: 2.5%;
+    font-size: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+    color: whitesmoke;
+}
+.copyright u {
+    font-size: 110%;
+    cursor: pointer;
+    transition: color .2s linear;
+}
+.copyright .heart {
+    width: 2.5%;
+    user-select: none;
+    pointer-events: none;
+}
+.copyright .react-logo {
+    width: 3.8%;
+}
+
+.copyright u:hover {
+    color: rgba(255, 255, 255, 0.502);
+}
+
+@media (max-width: 959px) {
+    .copyright {
+        font-size: clamp(12px, 2.1vw, 2.1vw);
+        bottom: clamp(20px, 2.5%, 2.5%);
+    }
+    .copyright .heart {
+        width: 3vw;
+        min-width: 16px;
+    }
+    .copyright .react-logo {
+        width: 4vw;
+        min-width: 23px;
+    }
+}
+
+@media (max-width: 399px) {
+    .copyright {
+        font-size: 3.1vw;
+    }
+    .copyright .heart {
+        width: 4vw;
+    }
+    .copyright .react-logo {
+        width: 5vw;
+    }
+}

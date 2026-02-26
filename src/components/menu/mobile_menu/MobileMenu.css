@@ -1,0 +1,151 @@
+@keyframes burgerColorIridescent {
+    0% { color: #64a6fc; }
+    16.66% { color: #2fd0c8; }
+    33.33% { color: #6ed485; }
+    50% { color: #fb9674; }
+    66.66% { color: #f8c24f; }
+    83.33% { color: #a189f0; }
+    100% { color: #64a6fc; }
+}
+
+@keyframes borderBottomIridescent {
+    0% { border-bottom-color: #64a6fc; }
+    16.66% { border-bottom-color: #2fd0c8; }
+    33.33% { border-bottom-color: #6ed485; }
+    50% { border-bottom-color: #fb9674; }
+    66.66% { border-bottom-color: #f8c24f; }
+    83.33% { border-bottom-color: #a189f0; }
+    100% { border-bottom-color: #64a6fc; }
+}
+
+@keyframes blurColorIridescent {
+    0% { background: #64a6fc42; }
+    16.66% { background: #2fd0c844; }
+    33.33% { background: #6ed48647; }
+    50% { background: #fb967441; }
+    66.66% { background: #f8c34f41; }
+    83.33% { background: #a189f03f; }
+    100% { background: #64a6fc42; }
+}
+
+
+.mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(8px);
+}
+.mobile-menu.hom {
+    animation: borderBottomIridescent 20s linear infinite;
+}
+.burger-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    width: 54px;
+    height: 54px;
+    margin-top: 3px;
+    margin-left: 9px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .2s linear;
+}
+.burger-button:hover {
+    background-color: rgba(255, 255, 255, 0.068);
+}
+.burger-icon {
+    width: 50%;
+    height: 100%;
+}
+.burger-icon.hom {
+    animation: burgerColorIridescent 20s linear infinite;
+}
+.mobile-menu .myLogo {
+    height: 80%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 5.5px;
+    right: 13px;
+}
+.mobile-menu .myLogo img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform .4s ease;
+    user-select: none;
+}
+.mobile-menu .myLogo img:hover {
+    transform: scale(1.2);
+}
+
+
+.opened {
+    z-index: 11;
+    position: fixed;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s ease;
+    visibility: hidden;
+}
+.opened.home {
+    animation: blurColorIridescent 20s linear infinite;
+}
+.opened-menu {
+    background-color: rgba(255, 255, 255, 0.186);
+    height: 100%;
+    width: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform .3s ease-out;
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+}
+.button-back {
+    margin-top: 3px;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+.button-back:hover {
+    background-color: rgba(255, 255, 255, 0.086);
+}
+.button-back img {
+    width: 23px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+    user-select: none;
+}
+
+.M-buttons-theme-lang {
+    width: 100%;
+}
+
+@media (pointer: coarse) {
+    .mobile-menu .myLogo img:hover {
+        transform: scale(1);
+    }
+    .mobile-menu .myLogo img:active {
+        transform: scale(1.2);
+    }
+}
+
+
+

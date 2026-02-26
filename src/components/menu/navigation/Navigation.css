@@ -1,0 +1,146 @@
+@keyframes indicator-colors {
+    0% { background: #64a6fc; }
+    16.66% { background: #2fd0c8; }
+    33.33% { background: #6ed485; }
+    50% { background: #fb9674; }
+    66.66% { background: #f8c24f; }
+    83.33% { background: #a189f0; }
+    100% { background: #64a6fc; }
+}
+@keyframes house-icon-colors {
+    0% { color: #64a6fc; }
+    16.66% { color: #2fd0c8; }
+    33.33% { color: #6ed485; }
+    50% { color: #fb9674; }
+    66.66% { color: #f8c24f; }
+    83.33% { color: #a189f0; }
+    100% { color: #64a6fc; }
+}
+
+@keyframes ripple-effect {
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+.navigation {
+    position: relative;
+    width: 60pt;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+}
+.navigation .nav-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 61px;
+    margin: 5px 0;
+    border-radius: inherit;
+    transition: background-color .3s linear;
+    overflow: hidden;
+}
+.navigation .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.086);
+}
+.navigation.light-theme .nav-button:hover {
+    background-color: rgba(52, 40, 40, 0.1);
+}
+
+.svg {
+    color: white;
+    transition: color 0.7s ease;
+    aspect-ratio: 1/1;
+    width: 25px;
+}
+.svg.house-svg {
+    animation: house-icon-colors 20s linear infinite;
+}
+.svg.about-svg {
+    color: #64a6fc;
+}
+.svg.tools-svg {
+    color: #a189f0;
+}
+.svg.portfolio-svg {
+    color: rgb(0, 71, 95);
+}
+.svg.contacts-svg {
+    color: #0c8e4d;
+}
+.navigation.light-theme .svg {
+    color: #282C34;
+}
+.navigation.light-theme .svg.house-svg {
+    animation: house-icon-colors 20s linear infinite;
+}
+.navigation.light-theme .svg.about-svg {
+    color: #64a6fc;
+}
+.navigation.light-theme .svg.tools-svg {
+    color: #a189f0;
+}
+.navigation.light-theme .svg.portfolio-svg {
+    color: rgb(0, 71, 95);
+}
+.navigation.light-theme .svg.contacts-svg {
+    color: #0c8e4d;
+}
+
+.tooltip {
+    position: fixed;
+    background-color: white;
+    color: #282C34;
+    padding: 6px 11px;
+    border-radius: 7pt;
+    font-size: 16px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    pointer-events: none;
+    border: #282C34 thin solid;
+    user-select: none;
+}
+.tooltip.visible {
+    position: fixed;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.indicator {
+    position: absolute;
+    right: 0;
+    width: 8.5px;
+    height: 61px;
+    border-radius: 12px;
+    transition: top .65s cubic-bezier(0,0,.2,1), background-color .25s cubic-bezier(.4,0,.2,1);
+}
+.indicator.iridescent-indicator {
+    animation: indicator-colors 20s linear infinite;
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-effect 0.6s linear;
+    pointer-events: none;
+}
+.desktop-menu.light-theme .navigation .ripple {
+    background: rgba(40, 44, 52, 0.4);
+}
+
+
+@media (pointer: coarse) {
+    .tooltip.visible {
+        display: none;
+    }
+}
+
+
+

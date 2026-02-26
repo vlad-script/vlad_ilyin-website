@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vlad Ilyin | Frontend Engineer</title>
+    <link href="/myLogo.svg" rel="icon" type="image/svg+xml" />
+    <meta name="description" 
+        content="Personal website of Vlad Ilyin. Frontend Developer, Software Engineer. Skills, contacts, about me." />
+    <meta name="keywords" content="vladilyin, vlad ilyin, ilyin vlad, frontend, software engineer, developer, html, css, javascript, react, nodejs" />
+    <meta name="author" content="Vlad Ilyin" />
+    <meta property="og:title" content="Vlad Ilyin | Frontend Developer" />
+    <meta property="og:description" content="Personal website of Vlad Ilyin. Frontend Developer, Software Engineer. Skills, contacts, about me." />
+    <meta property="og:image" content="https://vladilyin.netlify.app/myLogo.png" />
+    <meta property="og:url" content="https://vladilyin.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="IPQGUF8DsPzz0T-FKnCf1xxUqN36j_bf6JvzeYpLM3M" />
+    <!-- Google Fonts для логотипа -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Предзагрузка критических шрифтов для надписи WELCOME -->
+    <link rel="preload" href="/src/fonts/actay regular/Actay-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <style>
+      @font-face {
+        font-family: 'Actay';
+        src: url('/src/fonts/actay regular/Actay-Regular.woff2') format('woff2'),
+             url('/src/fonts/actay regular/Actay-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: 'Actay';
+        src: url('/src/fonts/actay regular/Actay-RegularItalic.woff2') format('woff2'),
+             url('/src/fonts/actay regular/Actay-RegularItalic.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
+        font-display: block;
+      }
+      @font-face {
+        font-family: 'Caveat';
+        src: url('/src/fonts/caveat/Caveat-Regular.woff2') format('woff2'),
+             url('/src/fonts/caveat/Caveat-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: 'Caveat';
+        src: url('/src/fonts/caveat/Caveat-Medium.woff2') format('woff2'),
+             url('/src/fonts/caveat/Caveat-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: 'Caveat';
+        src: url('/src/fonts/caveat/Caveat-SemiBold.woff2') format('woff2'),
+             url('/src/fonts/caveat/Caveat-SemiBold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: 'Caveat';
+        src: url('/src/fonts/caveat/Caveat-Bold.woff2') format('woff2'),
+             url('/src/fonts/caveat/Caveat-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: block;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; overflow-x: hidden;">
+    <div id="preloader" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(26, 188, 242);
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;"><img class="preloader-logo" src="/myLogo.svg"></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

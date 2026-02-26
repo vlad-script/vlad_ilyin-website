@@ -1,0 +1,231 @@
+@keyframes toolsRightShowUp {
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes toolsShowUp {
+    to {
+        opacity: 1;
+    }
+}
+
+
+.tools {
+    margin-left: 105px;
+    display: flex;
+    flex-direction: row;
+    font-size: clamp(45px, 3.8vw, 3.8vw);
+    animation: toolsShowUp .8s cubic-bezier(.4,0,.2,1) forwards;
+    opacity: 0;
+}
+
+.tools .tools-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tools .myTools {
+    width: 80%;
+    font-size: 110%;
+    font-weight: bold;
+    margin-top: clamp(80px, 14%, 14%);
+    color: #a189f0;
+}
+.tools .myTools-briefly {
+    width: 80%;
+    margin-top: 6%;
+    font-size: 40%;
+    color: whitesmoke;
+    line-height: 2.2;
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: transform .8s ease, opacity .8s ease, color 0.7s ease;
+}
+.tools.light-theme .myTools-briefly {
+    color: #282C34;
+}
+.tools .myTools-briefly.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.tools .myTools-briefly .img-js {
+    width: 4.5%;
+    min-width: 22px;
+    vertical-align: sub;
+    pointer-events: none;
+}
+.tools .myTools-briefly .img-react {
+    width: 5.4%;
+    min-width: 25px;
+    vertical-align: sub;
+    pointer-events: none;
+}
+.tools .tools-facts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.tools .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.tools .cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(14px, 33%, 33%);
+    width: 38%;
+    margin-top: 10%;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .8s ease, transform .8s ease;
+}
+.tools .cell.left {
+    transform: translateX(-20%);
+}
+.tools .cell.right {
+    transform: translateX(20%);
+}
+.tools .cell.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.tools .cell img {
+    user-select: none;
+    pointer-events: none;
+    width: 15%;
+    min-width: 33px;
+}
+.tools .cell-label {
+    text-align: center;
+    padding-top: 4%;
+    color: #f2d8ff;
+    line-height: 1.7;
+    transition: color 0.7s ease;
+}
+.tools.light-theme .cell-label {
+    color: #555;
+}
+.tools .cell-description {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 70%;
+    line-height: 1.8;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: color 0.7s ease;
+}
+.tools.light-theme .cell-description {
+    color: #444;
+}
+.tools .tools-left button {
+    margin-top: 8%;
+    border: none;
+    margin-bottom: 90px;
+    background-color: #a189f0;
+    color: rgba(0, 0, 0, 0.756);
+    border-radius: 8px;
+    width: 9.8vw;
+    min-width: 110px;
+    height: 3.5vw;
+    min-height: 44px;
+    font-size: clamp(20px, 1.6vw, 1.6vw);
+    font-family: 'Caveat';
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color .3s ease, transform .8s ease, opacity .8s ease, color 0.7s ease;
+    transform: translateY(20%);
+    opacity: 0;
+    user-select: none;
+}
+.tools .tools-left button.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+.tools .tools-left button:hover {
+    background-color: #785ecd;
+}
+.tools.light-theme .tools-left button {
+    color: white;
+}
+
+/*////////////////////////////////*/
+.tools .tools-right {
+    position: relative;
+    width: 50%;
+    background-color: #a189f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: toolsRightShowUp 1s ease forwards;
+    overflow-x: hidden;
+}
+.tools .tools-right .copyright {
+    bottom: 1.5%;
+}
+
+.tools ::selection {
+    background-color: #a189f06f;
+}
+
+
+@media (max-width: 959px) {
+    .tools {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        font-size: clamp(49px, 7vw, 7vw);
+    }
+    .tools .tools-left {
+        width: 100%;
+    }
+    .tools .myTools {
+        width: 90%;
+    }
+    .tools .myTools-briefly {
+        width: 90%;
+    }
+    .tools .myTools-briefly .img-react {
+        width: 4vw;
+        min-width: 28px;
+    }
+    .tools .tools-left button {
+        width: 18.2vw;
+        min-width: 120px;
+        height: 6.5vw;
+        min-height: 47px;
+        font-size: clamp(20px, 2.9vw, 2.9vw);
+        border-radius: 10px;
+    }
+    .tools .tools-right {
+        width: 100%;
+    }
+}
+@media (max-width: 463px) {
+    .tools .myTools {
+        font-size: clamp(30px, 12vw, 12vw);
+    }
+}
+@media (max-width: 399px) {
+    .tools .cell {
+        width: 47%;
+    }
+}
+
+@media (pointer: coarse) {
+    .tools .tools-left button:hover {
+        background-color: #a189f0;
+    }
+    .tools .tools-left button:active {
+        background-color: #785ecd;
+    }
+}
+
+
+

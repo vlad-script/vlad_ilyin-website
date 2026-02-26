@@ -1,0 +1,294 @@
+@keyframes contactsShowUp {
+    to {
+        opacity: 1;
+    }
+}
+@keyframes symbolConShowUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes contContShowUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.contacts {
+    background-color: #6ed485;
+    animation: contactsShowUp .8s cubic-bezier(.4,0,.2,1) forwards;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(45px, 3.8vw, 3.8vw);
+    min-height: 100vh;
+}
+.contacts .myContacts {
+    font-size: clamp(65px, 115%, 115%);
+    font-weight: bold;
+    color: whitesmoke;
+    margin-top: 7%;
+    margin-left: 36%;
+    display: flex;
+    text-shadow: 10px 10px 10px #08591b54;
+}
+.contacts .contacts-content {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin-top: 5%;
+    animation: contContShowUp .8s .5s cubic-bezier(.4,0,.2,1) forwards;
+    opacity: 0;
+    transform: translateY(10%);
+}
+.contacts .mail-form {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .6vw;
+    justify-content: space-between;
+}
+.contacts input[name='name'], .contacts input[name='email'] {
+    flex: 1 1 45%;
+    min-width: 230px;
+    height: 58px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+.contacts input[name='name']::placeholder, .contacts input[name='email']::placeholder {
+    padding-left: 10px;
+    color: #5bc173;
+    user-select: none;
+    font-family: 'Caveat';
+    font-size: 130%;
+}
+.contacts textarea {
+    flex: 1 1 100%;
+    width: 94%;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    height: 220px;
+    font-size: 20px;
+}
+.contacts textarea::placeholder {
+    padding-left: 10px;
+    color: #5bc173;
+    user-select: none;
+    font-family: 'Caveat';
+    font-size: 140%;
+}
+.contacts button[type='submit'] {
+    flex: 1 1 100%;
+    width: 94%;
+    height: 67px;
+    font-size: 31px;
+    font-family: 'Caveat';
+    font-weight: bolder;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: #5bc173;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacts .paper-plane {
+    width: 23px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.contacts .text-for-form {
+    width: 46%;
+    margin-left: 4%;
+    font-size: clamp(22px, 42%, 42%);
+    color: #086537;
+    text-shadow: 10px 10px 10px #08591b54;
+    line-height: 1.5;
+}
+.contacts .email-address {
+    font-size: 105%;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.539);
+    cursor: pointer;
+    text-shadow: none;
+    transition: text-decoration-color .3s ease;
+}
+.contacts .email-address:hover {
+    text-decoration-color: white;
+}
+.contacts .buttons-contacts {
+    width: 40%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+    transition: opacity .8s .3s ease-in-out;
+    opacity: 0;
+}
+.contacts .buttons-contacts.visible {
+    opacity: 1;
+}
+.contacts .buttons-contacts div {
+    width: 9.5%;
+    min-width: 55px;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 4%;
+    cursor: pointer;
+}
+.contacts .buttons-contacts div img {
+    width: 60%;
+    aspect-ratio: 1/1;
+    user-select: none;
+    pointer-events: none;
+}
+.contacts .buttons-contacts span {
+    font-size: 40%;
+    position: absolute;
+    top: 120%;
+    opacity: 0;
+    transform: scale(0.7);
+    background-color: white;
+    color: #282C34;
+    border-radius: 7pt;
+    border: #282C34 thin solid;
+    font-size: 16px;
+    padding: 6px 11px;
+    white-space: nowrap;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 10;
+    user-select: none;
+    pointer-events: none;
+}
+.contacts .buttons-contacts div:hover span {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.contacts .copyright {
+    position: static;
+    font-size: clamp(15px, 30%, 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+    color: white;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+.contacts .copyright .heart {
+    width: 1.5%;
+    min-width: 19px;
+    user-select: none;
+    pointer-events: none;
+}
+.contacts .copyright .react-logo {
+    width: 2%;
+    min-width: 25px;
+}
+
+.contacts ::selection {
+    background-color: #14ab3745;
+}
+
+@media (max-width: 959px) {
+    .contacts {
+        font-size: clamp(30px, 3.8vw, 3.8vw);
+    }
+    .contacts .myContacts {
+        margin-top: clamp(80px, 12%, 12%);
+        font-size: clamp(30px, 195%, 195%);
+    }
+    .contacts .contacts-content {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .contacts .mail-form {
+        width: 90%;
+        gap: 1vw;
+    }
+    .contacts .text-for-form {
+        width: 90%;
+        font-size: clamp(22px, 41%, 41%);
+        margin-top: 4%;
+    }
+    .contacts .buttons-contacts {
+        margin-top: 7%;
+        margin-bottom: 8%;
+    }
+    .contacts .buttons-contacts div {
+        width: 16%;
+    }
+    .contacts .copyright {
+        font-size: clamp(12px, 2.1vw, 2.1vw);
+        margin-bottom: min(20px);
+    }
+    .contacts .copyright .heart {
+        width: 3vw;
+        min-width: 16px;
+    }
+    .contacts .copyright .react-logo {
+        width: 4vw;
+        min-width: 23px;
+    }
+}
+
+@media (max-width: 505px) {
+    .contacts .myContacts {
+        font-size: clamp(12vw, 12vw, 12vw);
+    }
+    .contacts .mail-form {
+        gap: 1.4vw;
+    }
+}
+@media (max-width: 399px) {
+    .contacts .text-for-form {
+        font-size: clamp(22px, 73%, 73%);
+    }
+    .contacts .copyright {
+        font-size: clamp(13px, 3.1vw, 3.1vw);
+        margin-bottom: 5%;
+    }
+    .contacts .copyright .heart {
+        width: 3vw;
+        min-width: 16px;
+    }
+    .contacts .copyright .react-logo {
+        width: 4vw;
+        min-width: 23px;
+    }
+    .contacts button[type='submit'] {
+        font-size: 28px;
+    }
+    .contacts .paper-plane {
+        width: 22px;
+    }
+}
+
+@media (pointer: coarse) {
+    .contacts .buttons-contacts div:hover span {
+        display: none;
+    }
+}
+
+
+
