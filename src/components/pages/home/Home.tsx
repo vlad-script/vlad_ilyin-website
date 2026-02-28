@@ -14,14 +14,9 @@ import palette from './assets/palette.png';
 import userLight from './assets/user-light.png';
 import paletteLight from './assets/palette-light.png';
 import Copyright from '../../copyright/Copyright';
+import { PageProps } from '../../../types';
 
-type ScreenSize = 'mobile' | 'desktop';
-type Theme = 'dark' | 'light';
-
-interface HomeProps {
-    media: ScreenSize;
-    theme: Theme;
-}
+interface HomeProps extends PageProps {}
 
 export default function Home({ media, theme }: HomeProps): JSX.Element {
     const [welcome, setWelcome] = useState<string>("");

@@ -17,22 +17,9 @@ import redux from './assets/redux.svg';
 import solid from './assets/solid.png';
 import nodejs from './assets/nodejs.png';
 import Copyright from '../../copyright/Copyright';
+import { PageProps, CellProps } from '../../../types';
 
-type ScreenSize = 'mobile' | 'desktop';
-type Theme = 'dark' | 'light';
-
-interface ToolsProps {
-    media: ScreenSize;
-    theme: Theme;
-}
-
-interface CellProps {
-    img: string;
-    label: string;
-    description: string;
-    showDescriptions: boolean;
-    pos: 'l' | 'r';
-}
+interface ToolsProps extends PageProps {}
 
 export default function Tools({ media, theme }: ToolsProps): JSX.Element {
     const { t, i18n } = useTranslation();

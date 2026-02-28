@@ -1,6 +1,7 @@
 import imac from './assets/slider/imac.svg';
 import './Slider.css';
 import { useEffect, useState, useRef, FC } from 'react';
+import { TiltState } from '../../../types';
 import css from './assets/slider/css.svg';
 import html from './assets/slider/html.svg';
 import javascript from './assets/slider/javascript.svg';
@@ -30,12 +31,6 @@ const images: readonly string[] = [
     webpack,
     sass
 ] as const;
-
-interface TiltState {
-    x: number;
-    y: number;
-    scale: number;
-}
 
 export default function Slider(): JSX.Element {
     const [currentIndex, setCurrentIndex] = useState<number>(1);

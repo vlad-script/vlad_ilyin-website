@@ -2,6 +2,7 @@ import { useState, useEffect, FC } from 'react';
 import './Weather.css';
 import cloud from './assets/weather/cloud.png';
 import { useTranslation } from 'react-i18next';
+import { TiltStateExtended } from '../../../types';
 
 interface WeatherWidgetProps {
     widgetHover: (hover: boolean) => void;
@@ -16,20 +17,13 @@ interface WeatherInfo {
     cityRU: string;
 }
 
-interface TiltState {
-    x: number;
-    y: number;
-    scale: number;
-    scaleText: number;
-}
-
 const WeatherWidget: FC<WeatherWidgetProps> = ({ widgetHover }) => {
     const [temperature, setTemperature] = useState<number | null>(null);
     const [description, setDescription] = useState<string>("");
     const [iconWeather, setIconWeather] = useState<string>("");
     const [error, setError] = useState<string>("");
     const [city, setCity] = useState<string | null>(null);
-    const [tilt, setTilt] = useState<TiltState>({ x: 0, y: 0, scale: 1, scaleText: 1 });
+    const [tilt, setTilt] = useState<TiltStateExtended>({ x: 0, y: 0, scale: 1, scaleText: 1 });
     const [animEnd, setAnimEnd] = useState<boolean>(false);
     const { i18n } = useTranslation();
 

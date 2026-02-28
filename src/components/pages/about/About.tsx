@@ -14,32 +14,13 @@ import linkedin from './assets/linkedin.png';
 import email from './assets/email.png';
 import { useNavigate } from 'react-router-dom';
 import Copyright from '../../copyright/Copyright';
+import { PageProps, TiltState, CellProps } from '../../../types';
 
-type ScreenSize = 'mobile' | 'desktop';
-type Theme = 'dark' | 'light';
-
-interface AboutProps {
-    media: ScreenSize;
-    theme: Theme;
-}
-
-interface TiltState {
-    x: number;
-    y: number;
-    scale: number;
-}
+interface AboutProps extends PageProps {}
 
 interface FactsProps {
     showDescriptions: boolean;
     t: (key: string) => string;
-}
-
-interface CellProps {
-    img: string;
-    label: string;
-    description: string;
-    showDescriptions: boolean;
-    pos: 'l' | 'r';
 }
 
 interface RoundButtonProps {

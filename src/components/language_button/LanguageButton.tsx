@@ -3,21 +3,12 @@ import usaFlag from './assets/usa.svg';
 import rusFlag from './assets/russia.svg';
 import './LanguageButton.css';
 import { useTranslation } from 'react-i18next';
+import { Theme, TooltipState } from '../../types';
 
-type Theme = 'dark' | 'light';
 type LanguageVersion = 'rus' | 'eng';
 
 interface LanguageButtonProps {
     theme: Theme;
-}
-
-interface TooltipState {
-    visible: boolean;
-    text: string;
-    position: {
-        top: string;
-        left: string;
-    };
 }
 
 export default function LanguageButton({ theme }: LanguageButtonProps): JSX.Element {

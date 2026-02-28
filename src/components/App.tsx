@@ -9,9 +9,7 @@ import Portfolio from './pages/portfolio/Portfolio.tsx';
 import Tools from './pages/tools/Tools.tsx';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-type ScreenSize = 'mobile' | 'desktop';
-type Theme = 'dark' | 'light';
+import { ScreenSize, Theme } from '../types';
 
 const websiteTheme = localStorage.getItem('websiteTheme') as Theme | null;
 

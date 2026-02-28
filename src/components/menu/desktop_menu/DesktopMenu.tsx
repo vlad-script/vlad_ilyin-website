@@ -5,8 +5,7 @@ import './DesktopMenu.css';
 import LanguageButton from '../../language_button/LanguageButton.tsx';
 const myLogo = '/myLogo.svg';
 import ThemeButton from '../../theme_button/ThemeButton.tsx';
-
-type Theme = 'dark' | 'light';
+import { Theme } from '../../../types';
 
 interface DesktopMenuProps {
     theme: Theme;

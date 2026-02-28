@@ -1,20 +1,10 @@
 import { useState, useRef, useEffect, FC } from 'react';
 import './ThemeButton.css';
-
-type Theme = 'dark' | 'light';
+import { Theme, TooltipState } from '../../types';
 
 interface ThemeButtonProps {
     theme: Theme;
     setTheme: (theme: Theme) => void;
-}
-
-interface TooltipState {
-    visible: boolean;
-    text: string;
-    position: {
-        top: string;
-        left: string;
-    };
 }
 
 export default function ThemeButton({ theme, setTheme }: ThemeButtonProps): JSX.Element {

@@ -8,8 +8,8 @@ import LanguageButton from "../../language_button/LanguageButton.tsx";
 const myLogo = '/myLogo.svg';
 import { useNavigate } from "react-router-dom";
 import ThemeButton from "../../theme_button/ThemeButton.tsx";
+import { Theme } from '../../../types';
 
-type Theme = 'dark' | 'light';
 type ActiveSection = 'home' | string;
 
 interface MobileMenuProps {

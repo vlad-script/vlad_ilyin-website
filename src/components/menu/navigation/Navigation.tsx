@@ -3,8 +3,7 @@ import { useState, useRef, useLayoutEffect, FC } from 'react';
 import './Navigation.css';
 import icons from './assets/SVGIconsForNavigator';
 import { useTranslation } from 'react-i18next';
-
-type Theme = 'dark' | 'light';
+import { Theme, TooltipState } from '../../../types';
 
 interface NavigationProps {
     handleClickCloseButton?: () => void;
@@ -23,15 +22,6 @@ interface IndicatorStyle {
     top: string;
     backgroundColor: string;
     transition?: string;
-}
-
-interface TooltipState {
-    visible: boolean;
-    text: string;
-    position: {
-        top: string;
-        left: string;
-    };
 }
 
 export default function Navigation({ handleClickCloseButton, theme }: NavigationProps): JSX.Element {

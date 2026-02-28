@@ -18,17 +18,12 @@ import html from '../tools/assets/slider/html.svg';
 import css from '../tools/assets/slider/css.svg';
 import styled from './assets/styled.png';
 import redux from '../tools/assets/slider/redux.svg';
+import { TiltState } from '../../../types';
 
 interface ProjectProps {
     img: string;
     arrayTec: readonly string[];
     animTimer: number;
-}
-
-interface TiltState {
-    x: number;
-    y: number;
-    scale: number;
 }
 
 export default function Portfolio(): JSX.Element {
