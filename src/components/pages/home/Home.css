@@ -138,14 +138,14 @@
     color: #64a6fc;
     animation: fontColors 20s linear infinite;
 }
-.home .frontend {
+.home .fullstack {
     display: flex;
     flex-direction: row;
     animation: fullstackShowUp 0.6s ease 0.6s forwards;
     opacity: 0;
     transform: translateX(-10%);
 }
-.home .frontend img {
+.home .fullstack img {
     width: 10.5%;
     min-width: 42px;
     margin-left: 2%;
@@ -350,7 +350,7 @@
         width: 8%;
         min-width: 42px;
     }
-    .home .frontend img {
+    .home .fullstack img {
         width: 8%;
     }
     .home .developer img {
@@ -393,7 +393,7 @@
         width: 68%;
         min-width: 153px;
     }
-    .home .frontend img {
+    .home .fullstack img {
         min-width: 39px;
     }
     .home .developer img {
@@ -470,8 +470,6 @@
     }
     .home .developer img {
         min-width: 44px;
-    }
-        width: 5vw;
     }
 }
 

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import frontend from './assets/frontend.svg';
+import dev from './assets/dev.png';
 import myPhoto from './assets/myPhoto.png';
 import WeatherWidget from './Weather';
 import CurrencyWidget from './Currency';
@@ -55,15 +55,15 @@ export default function Home({ media, theme }: HomeProps): JSX.Element {
             <div className='home-left'>
                 <div className='home-left-part1'>
                     <div className='greeting'>{welcome ? welcome : (<>Good <span className='mobile-br'><br /></span>afternoon!</>)}<img src={hello} alt="hello" /></div>
-                    <div className='i-am'>{t('iAm')}&ensp;<span>Vlad Ilyin</span>,</div>
-                    <div className='frontend'>frontend<img src={computer} alt="computer" /></div>
-                    <div className='developer'>{t('developer')}<img src={frontend} style={{cursor: 'pointer'}}
+                    <div className='i-am'>{t('iAm')}&ensp;<span>Vlad</span>,</div>
+                    <div className='fullstack'>fullstack<img src={computer} alt="computer" /></div>
+                    <div className='developer'>{t('developer')}<img src={dev} style={{cursor: 'pointer'}}
                       onClick={() => {navigate('/tools')}} draggable='false' alt="frontend" /></div>
                 </div>
                 <div className='home-left-part2'>
                     <div className='left'>
                         <div className='information'>
-                            {i18n.language === 'ru' ? 'Веб-хакер' : 'The web hacker'}&#8239;<img src={www} alt="www" />
+                            web developer&#8239;<img src={www} alt="www" />
                             &#8239;{t("bigFanIT")}&#8239;&#128153;
                         </div>
                         <div className='buttons'>

@@ -1,16 +1,13 @@
 import './Tools.css';
-import { useEffect, useRef, useState, FC } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import html from './assets/html.png';
-import css from './assets/css.png';
 import javascript from './assets/javascript.png';
 import react_logo from './assets/react-logo.svg';
 import reactRouter from './assets/router.svg';
 import i18next from './assets/language.png';
-import postgresql from './assets/postgresql.svg';
+import mongodb from './assets/mongodb.png';
 import Slider from './Slider';
-import { useNavigate } from 'react-router-dom';
 import typescript from './assets/typescript.png';
 import sass from './assets/sass.png';
 import redux from './assets/redux.svg';
@@ -18,6 +15,7 @@ import solid from './assets/solid.png';
 import nodejs from './assets/nodejs.png';
 import Copyright from '../../copyright/Copyright';
 import { PageProps, CellProps } from '../../../types';
+
 
 interface ToolsProps extends PageProps {}
 
@@ -78,28 +76,24 @@ export default function Tools({ media, theme }: ToolsProps): JSX.Element {
                 </div>
                 <div className='tools-facts'>
                     <div className='line'>
-                        <Cell img={javascript} label={t('toolsComponent.facts.cell-3lb')} description={t('toolsComponent.facts.cell-3dc')} showDescriptions={showDescriptions} pos='l' />
-                        <Cell img={react_logo} label={t('toolsComponent.facts.cell-4lb')} description={t('toolsComponent.facts.cell-4dc')} showDescriptions={showDescriptions} pos='r' />
+                        <Cell img={mongodb} label={t('toolsComponent.facts.cell-1lb')} description={t('toolsComponent.facts.cell-1dc')} showDescriptions={showDescriptions} pos='l' />
+                        <Cell img={nodejs} label={t('toolsComponent.facts.cell-2lb')} description={t('toolsComponent.facts.cell-2dc')} showDescriptions={showDescriptions} pos='r' />
                     </div>
                     <div className='line'>
-                        <Cell img={typescript} label={t('toolsComponent.facts.cell-9lb')} description={t('toolsComponent.facts.cell-9dc')} showDescriptions={showDescriptions} pos='l' />
-                        <Cell img={redux} label={t('toolsComponent.facts.cell-12lb')} description={t('toolsComponent.facts.cell-12dc')} showDescriptions={showDescriptions} pos='r' />
+                        <Cell img={react_logo} label={t('toolsComponent.facts.cell-3lb')} description={t('toolsComponent.facts.cell-3dc')} showDescriptions={showDescriptions} pos='l' />
+                        <Cell img={redux} label={t('toolsComponent.facts.cell-4lb')} description={t('toolsComponent.facts.cell-4dc')} showDescriptions={showDescriptions} pos='r' />
                     </div>
                     <div className='line'>
-                        <Cell img={postgresql} label={t('toolsComponent.facts.cell-7lb')} description={t('toolsComponent.facts.cell-7dc')} showDescriptions={showDescriptions} pos='l' />
-                        <Cell img={nodejs} label={t('toolsComponent.facts.cell-8lb')} description={t('toolsComponent.facts.cell-8dc')} showDescriptions={showDescriptions} pos='r' />
+                        <Cell img={javascript} label={t('toolsComponent.facts.cell-5lb')} description={t('toolsComponent.facts.cell-5dc')} showDescriptions={showDescriptions} pos='l' />
+                        <Cell img={typescript} label={t('toolsComponent.facts.cell-6lb')} description={t('toolsComponent.facts.cell-6dc')} showDescriptions={showDescriptions} pos='r' />
                     </div>
                     <div className='line'>
-                        <Cell img={html} label={t('toolsComponent.facts.cell-1lb')} description={t('toolsComponent.facts.cell-1dc')} showDescriptions={showDescriptions} pos='l' />
-                        <Cell img={css} label={t('toolsComponent.facts.cell-2lb')} description={t('toolsComponent.facts.cell-2dc')} showDescriptions={showDescriptions} pos='r' />
+                        <Cell img={solid} label={t('toolsComponent.facts.cell-7lb')} description={t('toolsComponent.facts.cell-7dc')} showDescriptions={showDescriptions} pos='l' />
+                        <Cell img={i18next} label={t('toolsComponent.facts.cell-8lb')} description={t('toolsComponent.facts.cell-8dc')} showDescriptions={showDescriptions} pos='r' />
                     </div>
                     <div className='line'>
-                        <Cell img={sass} label={t('toolsComponent.facts.cell-10lb')} description={t('toolsComponent.facts.cell-10dc')} showDescriptions={showDescriptions} pos='l' />
-                        <Cell img={solid} label={t('toolsComponent.facts.cell-11lb')} description={t('toolsComponent.facts.cell-11dc')} showDescriptions={showDescriptions} pos='r' />
-                    </div>
-                    <div className='line'>
-                        <Cell img={reactRouter} label={t('toolsComponent.facts.cell-5lb')} description={t('toolsComponent.facts.cell-5dc')} showDescriptions={showDescriptions} pos='l' />
-                        <Cell img={i18next} label={t('toolsComponent.facts.cell-6lb')} description={t('toolsComponent.facts.cell-6dc')} showDescriptions={showDescriptions} pos='r' />
+                        <Cell img={sass} label={t('toolsComponent.facts.cell-9lb')} description={t('toolsComponent.facts.cell-9dc')} showDescriptions={showDescriptions} pos='l' />
+                        <Cell img={reactRouter} label={t('toolsComponent.facts.cell-10lb')} description={t('toolsComponent.facts.cell-10dc')} showDescriptions={showDescriptions} pos='r' />
                     </div>
                 </div>
                 <button ref={butRef} className={`${butIsVisible ? 'visible' : ''}`} onClick={handleClickForDescription}>{showDescriptions ? t('aboutComponent.buttonHideFacts') : t('aboutComponent.buttonMoreFacts')}</button>

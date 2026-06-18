@@ -13,7 +13,7 @@ import typescript from './assets/slider/typescript.svg';
 import webpack from './assets/slider/webpack.svg';
 import sass from './assets/slider/sass.svg';
 import redux from './assets/slider/redux.svg';
-import postgresql from './assets/slider/postgresql.svg';
+import mongodb from './assets/slider/mongodb.svg';
 import express from './assets/slider/express.svg';
 
 const images: readonly string[] = [
@@ -25,7 +25,7 @@ const images: readonly string[] = [
     redux,
     nodejs,
     express,
-    postgresql,
+    mongodb,
     git,
     vite,
     webpack,

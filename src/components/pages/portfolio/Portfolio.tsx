@@ -7,18 +7,22 @@ import heart from '../../copyright/assets/heart.png';
 import circletime from './assets/circletime.png';
 import labyrinth from './assets/labyrinth.png';
 import mysite from './assets/mysite.png';
-import sidebar from './assets/sidebar.png';
-import ts from '../tools/assets/slider/typescript.svg';
-import reactBlue from '../tools/assets/slider/react.svg';
-import webpack from '../tools/assets/slider/webpack.svg';
-import sass from '../tools/assets/slider/sass.svg';
-import js from '../tools/assets/slider/javascript.svg';
-import vite from '../tools/assets/slider/vite.svg';
-import html from '../tools/assets/slider/html.svg';
-import css from '../tools/assets/slider/css.svg';
-import styled from './assets/styled.png';
-import redux from '../tools/assets/slider/redux.svg';
+import blog from './assets/blog.png';
+import ts from '../Tools/assets/slider/typescript.svg';
+import reactBlue from '../Tools/assets/slider/react.svg';
+import webpack from '../Tools/assets/slider/webpack.svg';
+import sass from '../Tools/assets/slider/sass.svg';
+import js from '../Tools/assets/slider/javascript.svg';
+import vite from '../Tools/assets/slider/vite.svg';
+import html from '../Tools/assets/slider/html.svg';
+import css from '../Tools/assets/slider/css.svg';
+import redux from '../Tools/assets/slider/redux.svg';
+import nodejs from '../Tools/assets/slider/node-js.png';
+import mongodb from '../Tools/assets/slider/mongodb.svg';
+import express from '../Tools/assets/slider/express.svg';
+import aibot from './assets/aibot.png';
 import { TiltState } from '../../../types';
+
 
 interface ProjectProps {
     img: string;
@@ -48,10 +52,11 @@ export default function Portfolio(): JSX.Element {
                 ))}
             </div>
             <div className='projects-board'>
-                <Project img={circletime} arrayTec={[ts, reactBlue, webpack, sass]} animTimer={0} />
-                <Project img={mysite} arrayTec={[ts, reactBlue, vite]} animTimer={2} />
-                <Project img={labyrinth} arrayTec={[js, html, css]} animTimer={1} />
-                <Project img={sidebar} arrayTec={[js, redux, reactBlue, styled, vite, sass]} animTimer={3} />
+                <Project img={blog} arrayTec={[js, reactBlue, redux, nodejs, express, mongodb, sass]} animTimer={0} />
+                <Project img={mysite} arrayTec={[ts, reactBlue, vite, nodejs, express]} animTimer={1} />
+                <Project img={aibot} arrayTec={[ts, nodejs]} animTimer={2} />
+                <Project img={circletime} arrayTec={[ts, reactBlue, webpack, sass]} animTimer={3} />
+                <Project img={labyrinth} arrayTec={[js, html, css]} animTimer={4} />
             </div>
             <div className='copyright'>
                 &copy; 2026, {t('portfolioComponent.copyright-1')} <u onClick={() => {navigate('/contacts')}}>{t('portfolioComponent.copyright-2')}</u> {t('portfolioComponent.copyright-3')} <img src={heart} className='heart' alt="heart" /> {t('portfolioComponent.copyright-4')} <img src={react} draggable='false' alt="react" />
@@ -119,8 +124,6 @@ function Project({ img, arrayTec, animTimer }: ProjectProps): JSX.Element {
             case html:
             case css:
                 return '12%';
-            case styled:
-                return '20%';
             default:
                 return '10%';
         }
@@ -128,31 +131,30 @@ function Project({ img, arrayTec, animTimer }: ProjectProps): JSX.Element {
 
     const handleClickUrl = (): void => {
         switch (img) {
-            case circletime:
-                window.open('https://historicaldates-vladilyin.netlify.app/', '_blank');
-                break;
-            case labyrinth:
-                window.open('https://labyrinth-vladilyin.netlify.app/', '_blank');
-                break;
+            case blog:
+                open('https://blog-vladilyin.netlify.app/', '_blank');
             case mysite:
-                window.open('https://vladilyin.netlify.app/', '_blank');
-                break;
-            case sidebar: 
-                window.open('https://sidebar-vladilyin.netlify.app/', '_blank');
-                break;
+                open('https://vladilyin.netlify.app/', '_blank');
+            
+            case circletime: 
+                open('https://historicaldates-vladilyin.netlify.app/', '_blank');
+            case labyrinth: 
+                open('https://labyrinth-vladilyin.netlify.app/', '_blank');
         }
     };
 
     const handleClickGithub = (): void => {
         switch(img) {
-            case circletime:
-                open('https://github.com/vlad-script/historical_dates.git', '_blank');
-            case labyrinth:
-                open('https://github.com/vlad-script/labyrinth.git', '_blank');
+            case blog:
+                open('https://github.com/vladyue/BLOG', '_blank');
             case mysite:
-                open('https://github.com/vlad-script/vlad_ilyin-website.git', '_blank');
-            case sidebar: 
-                open('https://github.com/vlad-script/Sidebar.git', '_blank'); 
+                open('https://github.com/vladyue/vlad_ilyin-website', '_blank');
+            case aibot:
+                open('https://github.com/vladyue/vlad_aibot-telegram_bot', '_blank');
+            case circletime: 
+                open('https://github.com/vladyue/historical_dates', '_blank'); 
+            case labyrinth: 
+                open('https://github.com/vladyue/labyrinth-game', '_blank');
         }
     };
 

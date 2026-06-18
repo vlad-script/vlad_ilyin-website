@@ -50,7 +50,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin: 7% 0 0 4%;
+    margin: 7% 0 7% 4%;
 }
 
 .project {
@@ -63,6 +63,7 @@
     user-select: none;
     position: relative;
     overflow: hidden;
+    margin-bottom: 1.3%;
 }
 
 .curtain {
@@ -111,37 +112,31 @@
 .portfolio .copyright {
     position: absolute;
     bottom: 4%;
-    font-size: 24%;
+    font-size: 30%;
     color: whitesmoke;
     width: 100%;
     text-align: center;
     text-shadow: 0 0 7px #06434067;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3em;
 }
 .portfolio .copyright u {
     cursor: pointer;
-    transition: color .2s linear;
+    transition: color .2s ease;
     font-size: 110%;
 }
 .portfolio .copyright u:hover {
-    color: rgba(255, 255, 255, 0.502);
+    color: rgb(0, 71, 95);
 }
 .portfolio .copyright .heart {
-    width: 1.2%;
-    min-width: 12px;
+    width: 1.4%;
+    min-width: 16px;
     vertical-align: middle;
-    margin: 0 0.2em;
 }
 .portfolio .copyright img:last-child {
-    width: 1.8%;
-    min-width: 18px;
+    width: 2.3%;
+    min-width: 25px;
     vertical-align: middle;
     animation: react-rotate 5s linear infinite;
     user-select: none;
-    margin-left: 0.2em;
 }
 
 
@@ -179,19 +174,16 @@
         font-size: clamp(50px, 116%, 116%);
     }
     .portfolio .copyright {
-        font-size: 18%;
+        font-size: 25%;
         width: 90%;
-        gap: 0.25em;
     }
     .portfolio .copyright .heart {
-        width: 1.5%;
-        min-width: 12px;
-        margin: 0 0.15em;
+        width: 2.2%;
+        min-width: 16px;
     }
     .portfolio .copyright img:last-child {
-        width: 2%;
-        min-width: 18px;
-        margin-left: 0.15em;
+        width: 3.5%;
+        min-width: 25px;
     }
     .projects-board {
         width: 90%;
@@ -235,16 +227,10 @@
         margin-right: 7%;
     }
     .portfolio .copyright {
-        font-size: 18%;
-        gap: 0.2em;
-    }
-    .portfolio .copyright .heart {
-        width: 1.8%;
-        margin: 0 0.1em;
+        font-size: 25%;
     }
     .portfolio .copyright img:last-child {
-        width: 2.2%;
-        margin-left: 0.1em;
+        width: 3%;
     }
     .projects-board {
         margin-bottom: 40%;
@@ -254,6 +240,3 @@
         margin-bottom: 3%;
     }
 }
-
-
-

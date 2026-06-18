@@ -104,13 +104,11 @@ export default function About({ media, theme }: AboutProps): JSX.Element {
                 <div ref={brieflyRef} className={`aboutMe-briefly ${isVisible ? 'visible' : ''}`}>
                     {i18n.language === 'ru' ?
                         <>
-                            Я инженер-программист. Занимаюсь <span>frontend разработкой</span>.
-                            Двигаюсь в сторону <span>fullstack</span> разработки.
+                            Я инженер-программист. Занимаюсь <span>fullstack разработкой</span>
                         </>
                     :
                         <>
-                            I'm a software engineer. I specialize in <span>frontend development</span>.
-                            I'm moving towards <span>fullstack</span> development.
+                            I'm a software engineer. I specialize in <span>fullstack development</span>
                         </>
                     }
                 </div>
@@ -134,9 +132,9 @@ export default function About({ media, theme }: AboutProps): JSX.Element {
                     </div>
                 </div>
                 <div className='round-buttons'>
-                    <RoundButton img={github} tooltipText='GitHub' element='el-1' href='https://github.com/vladilyinoff/' />
-                    <RoundButton img={instagram} tooltipText='Instagram' element='el-2' href='https://www.instagram.com/vladilyinoff/' />
-                    <RoundButton img={telegram} tooltipText='Telegram' element='el-3' href='https://t.me/worldhacker' />
+                    <RoundButton img={github} tooltipText='GitHub' element='el-1' href='https://github.com/vladyue/' />
+                    <RoundButton img={instagram} tooltipText='Instagram' element='el-2' href='https://www.instagram.com/vladyue_/' />
+                    <RoundButton img={telegram} tooltipText='Telegram' element='el-3' href='https://t.me/vladfullstack' />
                     <RoundButton img={linkedin} tooltipText='LinkedIn' element='el-4' />
                     <RoundButton img={email} tooltipText='Email' element='el-5' href='mailto:vladjsx.it@gmail.com' />
                 </div>
