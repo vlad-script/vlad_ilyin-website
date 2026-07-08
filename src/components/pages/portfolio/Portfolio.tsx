@@ -132,7 +132,7 @@ function Project({ img, arrayTec, animTimer }: ProjectProps): JSX.Element {
     const handleClickUrl = (): void => {
         switch (img) {
             case blog:
-                open('https://blog-vladilyin.netlify.app/', '_blank');
+                open('https://thecreatebook.netlify.app/', '_blank');
             case mysite:
                 open('https://vladilyin.netlify.app/', '_blank');
             
